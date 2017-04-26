@@ -1,0 +1,11 @@
+//JOBID123 JOB(ACCTINFO,'MY JOB'),CLASS=A,
+//   MSGCLASS=0,MSGLEVEL=(1,1),NOTIFY=&SYSUID
+//*******************************************
+//* IEFBR14 TO ALLOCATE AN EMPTY FILE       *
+//*******************************************
+//STEP1 EXEC PGM=IEFBR14
+//SYSUT1 DD DSN=USER.FILE.NEW,
+//   DISP=(NEW,CATLG,DELETE),
+//   UNIT=3390,SPACE=(CYCL,(1,1),RLSE)
+//SYSOUT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
